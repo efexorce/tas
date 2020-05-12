@@ -17,34 +17,7 @@ pause(){
  
 versionbilgisi(){
 echo "
-Version bilgisi V 1.0.0:
-Tarih: 8 Mayıs 2020
-Güncelleme: githubda yüklenip başlamıştır.
-
-Version bilgisi V 0.4.0:
-Tarih: 5 Mayıs 2020
-Güncelleme: vpnconfig.ovpn dosyasi ile vpn baglanti kurulmaktadir.
-(herkesin kendi vpn dosyasını ayarlaması gerekmektedir.)
-openvpn sonlandırma eklenmiştir.
-mount ve log takibi eklenmiştir.
-(neyi sürekli mount ediyorsanız ve hangi logları takip etmeniz gerekiyorsa düzenleyebilirsiniz.)
-
-Version bilgisi V 0.3.0:
-Tarih: 5 Mart 2019
-Güncelleme: Mongodb ve snapd servislerini durdurma eklendi.
-
-Version bilgisi V 0.2.0:
-Tarih: 13 Şubat 2019
-Güncelleme: Versiyon Bilgisi Menüye Eklendi.
-
-Version bilgisi V 0.1.0:
-Tarih: 13 Şubat 2019
-Güncelleme: Error loglarının yanına access loglar eklendi. Sistem Günlükleri kategorize edildi.
-
-Version bilgisi V 0.0.1:
-Tarih: 12 Şubat 2019
-Güncelleme: Httpd için yanlış olan error.log yolu error_log olarak değiştirildi.
-
+Versiyon Bilgileri github üzerinde takip edilmektedir.
 "
 	
 
@@ -78,6 +51,10 @@ do
 	echo "23. net-tools(ifconfig) kurulumunu yap"
 	echo "24. gimp kurulumunu yap"
 	echo "25. openvpn kurulumunu yap"
+
+
+	echo "31. systemd-resolved Servisini aç"
+	echo "32. DNS Önbelleğini Temizle(systemd-resolved açık olmalı)"
 
 	echo "81. (SUNUCU)openvpn servisini durdur"
 	echo "82. (SUNUCU)mongodb servisini durdur"
@@ -136,6 +113,9 @@ do
 		23) echo; sudo apt install net-tools;;
 		24) echo; sudo apt install gimp;;
 		25) echo; sudo apt install openvpn;;
+
+		31) echo; sudo systemctl enable systemd-resolved.service; pause;;
+		32) echo; sudo systemd-resolve --flush-caches; pause;;
 
 		81) echo; sudo service openvpn stop; pause;;
 		82) echo; sudo service mongodb stop; pause;;
