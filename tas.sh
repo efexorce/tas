@@ -51,6 +51,7 @@ do
 	echo "23. net-tools(ifconfig) kurulumunu yap"
 	echo "24. gimp kurulumunu yap"
 	echo "25. openvpn kurulumunu yap"
+	echo "26. dnsutils(dig) kurulumunu yap"
 
 
 	echo "31. systemd-resolved Servisini aç"
@@ -113,7 +114,8 @@ do
 		23) echo; sudo apt install net-tools;;
 		24) echo; sudo apt install gimp;;
 		25) echo; sudo apt install openvpn;;
-
+		26) echo; sudo apt-get install dnsutils;;
+		
 		31) echo; sudo systemctl enable systemd-resolved.service; pause;;
 		32) echo; sudo systemd-resolve --flush-caches; pause;;
 
