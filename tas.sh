@@ -38,7 +38,7 @@ do
 	echo "---------------------------------"
 	echo "1. SÜPER KULLANICI yetkileri al"
 	echo "2. İp adresim nedir"
-	echo "3. Ağı(Network) baştan başlat"
+	echo "3. Ağı(Network) baştan başlat(netplan apply)"
 
 	echo "10. OPENVPN ile bağlan"
 	echo "11. Mount edilecekler"
@@ -71,7 +71,7 @@ do
 	case $c in
 		1) sudo echo "süper kullanıcı oldunuz"; pause;;
 		2) echo; echo "Yerel ip adresiniz(LAN):$(tput setaf 1)" ; ip address | grep inet | grep -v 127.0.0.1 | grep -v inet6 | cut -d'/' -f1 |  sed 's/inet//' |  sed 's/ //g' ; echo "$(tput sgr0)Genel ip adresiniz(WAN):$(tput setaf 3)" ;  curl -s ipinfo.io/ip  ; echo "$(tput sgr0)İnternet Servis Sağlayıcınız(ISP):$(tput setaf 2)" ; curl -s ipinfo.io/org ; echo "$(tput sgr0)" ; pause;;
-		3) sudo /etc/init.d/networking restart; sudo systemctl restart network; pause;;
+		3) sudo /etc/init.d/networking restart; sudo systemctl restart network; sudo netplan apply; pause;;
 
 		10) echo; nohup sudo xfce4-terminal -e "sudo openvpn vpnconfig.ovpn" &;;
 
