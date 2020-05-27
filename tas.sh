@@ -10,7 +10,7 @@ trap '' SIGTSTP
 
 BASEDIR=$(dirname "$0")
 echo "$BASEDIR"
-$BASEDIR/settings.conf
+source $BASEDIR/settings.conf
 
 pause(){
 	local m="$@"
@@ -35,7 +35,7 @@ do
 
 
 
-	clear
+	#clear
 	echo "$(date)"
 	echo "	     A N A  M E N U "
 	echo "---------------------------------"
@@ -104,7 +104,7 @@ do
 # içinde kullanıcı adı ve parolam yazıyor onu da ordan otomatik çekiyor
 ############################
 
-		11) echo; sh sudo mount -t cifs -o domain=$domain,username=$username,password=$pass $remotepath $localpath ;;
+		11) echo;echo $username olarak $domain ağına bağlanıyor; sudo mount -t cifs -o domain=$domain,username=$username,password=$pass $remotepath $localpath ; pause;;
 
 		12) echo; nohup sudo xfce4-terminal -e "tail -f -n 1000 $logfile" &;;
 		13) echo; sudo killall openvpn; pause;;
