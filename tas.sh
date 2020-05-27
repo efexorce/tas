@@ -8,7 +8,9 @@ trap '' SIGINT
 trap ''  SIGQUIT
 trap '' SIGTSTP
 
- 
+
+source settings.conf
+
 pause(){
 	local m="$@"
 	echo "$m"
@@ -101,11 +103,9 @@ do
 # içinde kullanıcı adı ve parolam yazıyor onu da ordan otomatik çekiyor
 ############################
 
-		11) echo; sh ~/mountlarim.sh;;
+		11) echo; sh sudo mount -t cifs -o domain=$domain,username=$username,password=$pass $remotepath $localpath ;;
 
-#sudo mount -t cifs -o domain=firma,username=mustafa.ulker,password=parolam //fileserver/depo /home/mustafaulker/SDB/fileserver/depo/ 
-
-		12) echo; nohup sudo xfce4-terminal -e "tail -f -n 1000 /home/mustafaulker/SDB/loglar/logon.txt" &;;
+		12) echo; nohup sudo xfce4-terminal -e "tail -f -n 1000 $logfile" &;;
 		13) echo; sudo killall openvpn; pause;;
 		14) gimp "`find ~/Resimler/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "`" ;;
 
