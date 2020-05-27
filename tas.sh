@@ -8,8 +8,9 @@ trap '' SIGINT
 trap ''  SIGQUIT
 trap '' SIGTSTP
 
-
-source settings.conf
+BASEDIR=$(dirname "$0")
+echo "$BASEDIR"
+$BASEDIR/settings.conf
 
 pause(){
 	local m="$@"
