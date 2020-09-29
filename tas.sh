@@ -44,7 +44,7 @@ do
 	echo "3. Ağı(Network) baştan başlat(netplan apply)"
 
 	echo "10. OPENVPN ile bağlan"
-	echo "11. Mount edilecekler"
+	echo "11. Mount edilecekler - 111. umount et" 
 	echo "12. Login takibi"
 	echo "13. OPENVPN bağlantısını öldür"
 	echo "14. Son fotoyu gimp ile aç"
@@ -105,7 +105,7 @@ do
 ############################
 
 		11) echo;echo $username olarak $domain ağına bağlanıyor; sudo mount -t cifs -o domain=$domain,username=$username,password=$pass $remotepath $localpath ; pause;;
-
+		111) echo;echo $username olarak $domain ağından çıkılıyor; sudo umount $localpath ; pause;;
 		12) echo; nohup sudo xfce4-terminal -e "tail -f -n 1000 $logfile" &;;
 		13) echo; sudo killall openvpn; pause;;
 		14) gimp "`find ~/Resimler/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "`" ;;
