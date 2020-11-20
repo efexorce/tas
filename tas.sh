@@ -102,6 +102,9 @@ do
 
 ########auth.txt############
 # içinde kullanıcı adı ve parolam yazıyor onu da ordan otomatik çekiyor
+#username
+#password
+#auth.txt olarak kaydedin.
 ############################
 
 		11) echo;echo $username olarak $domain ağına bağlanıyor; sudo mount -t cifs -o domain=$domain,username=$username,password=$pass $remotepath $localpath ; pause;;
