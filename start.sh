@@ -39,7 +39,7 @@ do
 	echo "6. Sistem kısayolları"
 	echo "7. SUNUCU kısayolları"
 
-	echo "97. Edit tas.sh(Bu program)"
+	echo "97. Edit start.sh(Bu program)"
 	echo "98. Versiyon Bilgisi"
 	echo "99. Çıkış"
 
@@ -54,7 +54,7 @@ do
 		6) echo; sh system.sh ;;
 		7) echo; sh server.sh ;;
 
-		97) gedit tas.sh;;
+		97) gedit start.sh;;
 		98) versionbilgisi; pause;;
 		99) break;;
 		*) Pause "Sadece 1-99 arasında seçim yapınız"
