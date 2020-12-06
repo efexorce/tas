@@ -29,11 +29,13 @@ do
 	echo "1. SÜPER KULLANICI yetkileri al"
 
 	echo "2. gedit kurulumunu yap"
-	echo "3. flameshot kurulumunu yap"
-	echo "4. net-tools(ifconfig) kurulumunu yap"
-	echo "5. gimp kurulumunu yap"
-	echo "6. openvpn kurulumunu yap"
-	echo "7. dnsutils(dig) kurulumunu yap"
+	echo "3. curl kurulumunu yap"
+
+	echo "4. flameshot kurulumunu yap"
+	echo "5. net-tools(ifconfig) kurulumunu yap"
+	echo "6. gimp kurulumunu yap"
+	echo "7. openvpn kurulumunu yap"
+	echo "8. dnsutils(dig) kurulumunu yap"
 
 
 	echo "97. Edit applications.sh(Bu program)"
@@ -46,11 +48,13 @@ do
 	case $c in
 		1) sudo echo "süper kullanıcı oldunuz"; pause;;
 		2) echo; sudo apt install gedit;;
-		3) echo; sudo apt install flameshot;;
-		4) echo; sudo apt install net-tools;;
-		5) echo; sudo apt install gimp;;
-		6) echo; sudo apt install openvpn;;
-		7) echo; sudo apt-get install dnsutils;;
+		3) echo; sudo apt install gedit;;
+
+		4) echo; sudo apt install flameshot;;
+		5) echo; sudo apt install net-tools;;
+		6) echo; sudo apt install gimp;;
+		7) echo; sudo apt install openvpn;;
+		8) echo; sudo apt-get install dnsutils;;
 
 
 
