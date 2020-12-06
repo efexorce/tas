@@ -47,14 +47,14 @@ do
 	# take action
 	case $c in
 		1) sudo echo "süper kullanıcı oldunuz"; pause;;
-		2) echo; sudo apt install gedit;;
-		3) echo; sudo apt install gedit;;
+		2) echo; echo y | sudo apt install gedit;;
+		3) echo; echo y |  sudo apt install gedit;;
 
-		4) echo; sudo apt install flameshot;;
-		5) echo; sudo apt install net-tools;;
-		6) echo; sudo apt install gimp;;
-		7) echo; sudo apt install openvpn;;
-		8) echo; sudo apt-get install dnsutils;;
+		4) echo; echo y |  sudo apt install flameshot;;
+		5) echo; echo y |  sudo apt install net-tools;;
+		6) echo; echo y |  sudo apt install gimp;;
+		7) echo; echo y |  sudo apt install openvpn;;
+		8) echo; echo y |  sudo apt-get install dnsutils;;
 
 
 
