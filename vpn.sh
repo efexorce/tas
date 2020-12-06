@@ -75,7 +75,7 @@ do
 	echo "97. Edit vpn.sh(Bu program)"
 	echo "98. Anamenüye dön"
 
-	echo "99. Çıkış"
+
 
 	read -r -p "Seçiminizi yapınız [1-99] : " c
 	# take action
