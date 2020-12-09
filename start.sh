@@ -52,7 +52,7 @@ do
 		4) echo; sh $BASEDIR/applications.sh ;;
 		5) echo; sh $BASEDIR/shortcuts.sh ;;
 		6) echo; sh $BASEDIR/system.sh ;;
-		7) echo; sh $BASEDIR/server.sh ;;
+		7) echo; sudo bash $BASEDIR/server.sh ;;
 
 		97) gedit $BASEDIR/start.sh;;
 		98) versionbilgisi; pause;;
