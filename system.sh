@@ -45,11 +45,11 @@ do
 		2) echo; sudo systemctl enable systemd-resolved.service; pause;;
 		3) echo; sudo systemd-resolve --flush-caches; pause;;
 
-		97) gedit system.sh;;
+		97) gedit $BASEDIR/system.sh;;
 
 
 		98) break;;
-		*) Pause "Sadece 1-99 arasında seçim yapınız"
+		*) Pause "Sadece 1-98 arasında seçim yapınız"
 	esac
 done
 

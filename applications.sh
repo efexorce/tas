@@ -59,11 +59,11 @@ do
 
 
 
-		97) gedit applications.sh;;
+		97) gedit $BASEDIR/applications.sh;;
 
 
 		98) break;;
-		*) Pause "Sadece 1-99 arasında seçim yapınız"
+		*) Pause "Sadece 1-98 arasında seçim yapınız"
 	esac
 done
 

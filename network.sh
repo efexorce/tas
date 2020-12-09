@@ -85,9 +85,9 @@ nohup sudo xfce4-terminal -e "tail -f -n 1000 $logfile" ;
 fi	
 pause;;
 		7) loginbilgisi; pause;;
-		97) gedit network.sh;;
+		97) gedit $BASEDIR/network.sh;;
 
 		98) break;;
-		*) Pause "Sadece 1-99 arasında seçim yapınız"
+		*) Pause "Sadece 1-98 arasında seçim yapınız"
 	esac
 done

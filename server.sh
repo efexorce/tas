@@ -53,9 +53,9 @@ do
 		   echo; echo '*** Sistem Günlüğü(journalctl -xe):';journalctl -xe | tail -n 10; 
 		   echo;  pause;;
 
-		97) gedit server.sh;;
+		97) gedit $BASEDIR/server.sh;;
 		98) break;;
-		*) Pause "Sadece 1-99 arasında seçim yapınız"
+		*) Pause "Sadece 1-98 arasında seçim yapınız"
 	esac
 done
 

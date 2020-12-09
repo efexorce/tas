@@ -42,11 +42,11 @@ do
 		2) gimp "`find ~/Resimler/ -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "`" ;;
 
 
-		97) gedit shortcuts.sh;;
+		97) gedit $BASEDIR/shortcuts.sh;;
 
 
 		98) break;;
-		*) Pause "Sadece 1-99 arasında seçim yapınız"
+		*) Pause "Sadece 1-98 arasında seçim yapınız"
 	esac
 done
 

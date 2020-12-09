@@ -47,14 +47,14 @@ do
 	# take action
 	case $c in
 		1) sudo echo "süper kullanıcı oldunuz"; pause;;
-		2) echo; bash network.sh ;;
-		3) echo; sh vpn.sh ;;
-		4) echo; sh applications.sh ;;
-		5) echo; sh shortcuts.sh ;;
-		6) echo; sh system.sh ;;
-		7) echo; sh server.sh ;;
+		2) echo; bash $BASEDIR/network.sh ;;
+		3) echo; sh $BASEDIR/vpn.sh ;;
+		4) echo; sh $BASEDIR/applications.sh ;;
+		5) echo; sh $BASEDIR/shortcuts.sh ;;
+		6) echo; sh $BASEDIR/system.sh ;;
+		7) echo; sh $BASEDIR/server.sh ;;
 
-		97) gedit start.sh;;
+		97) gedit $BASEDIR/start.sh;;
 		98) versionbilgisi; pause;;
 		99) break;;
 		*) Pause "Sadece 1-99 arasında seçim yapınız"
